@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Dietary Ingredient Scanner — User Manual</title>
-<meta name="description" content="The complete user manual for Dietary Ingredient Scanner: an app that reads a food label and checks it against Jain and gluten-free dietary rules.">
+<meta name="description" content="The complete user manual for Dietary Ingredient Scanner: an app that reads a food label and checks it against Jain and gluten-free dietary rules. Includes an illustrated primer, an infographic and two audio explainers.">
 <meta name="theme-color" content="#ff6b5e">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -192,6 +192,80 @@
     .pair{flex-direction:column;align-items:center}
     h1{font-size:30px}h2{font-size:24px}
   }
+
+  /* ================= PRIMER SLIDES, INFOGRAPHIC & MEDIA CARDS ================= */
+  figure.slide,figure.infographic{
+    margin:26px 0;border:3px solid var(--ink);border-radius:22px;overflow:hidden;background:#fff;
+    box-shadow:7px 7px 0 rgba(51,48,44,.13)
+  }
+  figure.slide img,figure.infographic img{width:100%;display:block;cursor:zoom-in}
+  figure.slide figcaption,figure.infographic figcaption{
+    font-size:14px;color:var(--muted);padding:13px 18px;border-top:2.5px dashed var(--line);background:#fffdf7
+  }
+  figure.slide figcaption b,figure.infographic figcaption b{
+    font-family:'Baloo 2';font-weight:700;font-size:16px;color:var(--ink);display:block;margin-bottom:2px
+  }
+  figcaption .src{color:#8d8377;font-style:italic}
+  figure.slide.mint{box-shadow:7px 7px 0 var(--mint)}
+  figure.slide.sky{box-shadow:7px 7px 0 var(--sky)}
+  figure.slide.grape{box-shadow:7px 7px 0 var(--grape)}
+  figure.slide.bubble{box-shadow:7px 7px 0 var(--bubble)}
+  figure.slide.lemon{box-shadow:7px 7px 0 var(--lemon)}
+  figure.infographic{max-width:520px;margin-left:auto;margin-right:auto;box-shadow:8px 8px 0 var(--lemon)}
+
+  /* --- audio explainers --- */
+  .media-card{
+    display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:center;
+    border:3px solid var(--ink);border-radius:26px;padding:20px 24px;margin:28px 0;background:#fff;
+    box-shadow:7px 7px 0 var(--grape)
+  }
+  .media-card.gf{box-shadow:7px 7px 0 var(--sky)}
+  .media-card .art{border:2.5px solid var(--ink);border-radius:18px;overflow:hidden;line-height:0}
+  .media-card .art svg{display:block;width:100%;height:auto}
+  .media-card .body{min-width:0}
+  .media-card h4{font-family:'Baloo 2';font-weight:800;font-size:22px;margin:0 0 4px;line-height:1.2}
+  .media-card p{font-size:14.5px;margin:0 0 13px}
+  .lang{
+    display:inline-block;font-family:'Baloo 2';font-weight:700;font-size:12.5px;letter-spacing:.4px;
+    background:var(--grape-soft);color:var(--ink);border:2px solid var(--ink);border-radius:999px;
+    padding:1px 12px;margin-bottom:7px
+  }
+  .lang.sky{background:#cfe9fb} .lang.lemon{background:var(--lemon)}
+  .dur{
+    display:inline-flex;align-items:center;gap:5px;font-family:'Baloo 2';font-weight:700;
+    font-size:12.5px;letter-spacing:.4px;background:#fff;color:var(--ink);
+    border:2px solid var(--ink);border-radius:999px;padding:1px 11px;margin:0 0 7px 7px;
+    vertical-align:top
+  }
+  .dur svg{color:var(--coral-ink);flex:none}
+  .media-card audio{width:100%;height:40px;display:block;margin-bottom:9px;border-radius:999px}
+  .media-card .dl{font-size:13px;font-weight:700;color:var(--coral-ink)}
+
+  /* --- primer PDF --- */
+  .primer-card{
+    display:grid;grid-template-columns:1fr 210px;gap:26px;align-items:center;
+    border:3px solid var(--ink);border-radius:26px;padding:22px 26px;margin:28px 0;
+    background:linear-gradient(120deg,#ffffff 40%,#eef8ff);box-shadow:7px 7px 0 var(--sky)
+  }
+  .primer-card h4{font-family:'Baloo 2';font-weight:800;font-size:22px;margin:0 0 5px;line-height:1.2}
+  .primer-card p{font-size:14.5px;margin:0 0 16px}
+  .primer-card .cover{display:block;transform:rotate(-3deg);transition:transform .18s}
+  .primer-card .cover:hover{transform:rotate(-1deg) scale(1.03)}
+  .primer-card .cover img{width:100%;display:block;border:3px solid var(--ink);border-radius:12px;
+    box-shadow:5px 5px 0 rgba(51,48,44,.22)}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;background:var(--indigo);color:#fff;
+    border:3px solid var(--ink);border-radius:999px;padding:9px 22px;
+    font-family:'Baloo 2';font-weight:700;font-size:16.5px;box-shadow:4px 4px 0 var(--ink);
+    text-decoration:none;transition:transform .12s
+  }
+  .btn:hover{text-decoration:none;color:#fff;transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+
+  @media(max-width:760px){
+    .media-card,.primer-card{grid-template-columns:1fr}
+    .primer-card .cover{max-width:190px;margin:0 auto}
+    figure.infographic{max-width:100%}
+  }
 </style>
 </head>
 <body>
@@ -268,6 +342,28 @@
       <div class="diet c4"><span class="dot"><svg class="ic"><use href="#i-honey"/></svg></span> No honey</div>
       <div class="diet c5"><span class="dot"><svg class="ic"><use href="#i-egg"/></svg></span> No eggs</div>
     </div>
+    <figure class="slide mint">
+      <img loading="lazy" decoding="async" src="media/slide-02-belief-biology.jpg" alt="Two needs, one engine">
+      <figcaption><b>Two needs, one engine</b> One dietary need grows out of conviction, the other out of the body. The app applies both rule sets to the same label in a single pass. <span class="src">From the illustrated primer, slide 2.</span></figcaption>
+    </figure>
+    <div class="primer-card">
+      <div class="body">
+        <span class="lang sky">Illustrated primer &middot; 14 pages &middot; PDF</span>
+        <h4>The Digital Lens for Belief and Biology</h4>
+        <p>A visual companion to this manual: how the two dietary rule sets differ, what happens between
+          the shutter button and the verdict, and an annotated tour of every screen. Useful on its own,
+          and a quick way to explain the app to someone else.</p>
+        <a class="btn" href="media/Dietary-Ingredient-Scanner-Primer.pdf" download>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+               stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>
+          Download the primer
+        </a>
+      </div>
+      <a class="cover" href="media/Dietary-Ingredient-Scanner-Primer.pdf" download aria-label="Download the primer PDF">
+        <img loading="lazy" decoding="async" src="media/slide-01-cover.jpg" alt="Primer cover">
+      </a>
+    </div>
   </section>
 
   <section class="page" id="intro-a">
@@ -310,6 +406,55 @@
     than to flatten it into one rigid standard. It offers a "strict observance" setting precisely so a
     household can calibrate the analysis to match how they actually practice their faith, rather than
     imposing a single outside definition of what counts as Jain-friendly.</p>
+    <div class="media-card jain">
+      <div class="art"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration: an open palm with a wheel at its centre, sound radiating outward through leaves">
+<defs>
+  <linearGradient id="jbg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#e6fbf3"/><stop offset="55%" stop-color="#f3f0ff"/><stop offset="1" stop-color="#fff6dd"/>
+  </linearGradient>
+</defs>
+<rect width="320" height="200" fill="url(#jbg)"/>
+<!-- soil / micro-organisms the vow protects -->
+<g fill="#8b6ff0" opacity=".38">
+  <circle cx="34" cy="176" r="3.4"/><circle cx="52" cy="186" r="2.2"/><circle cx="20" cy="160" r="2"/>
+  <circle cx="70" cy="178" r="2.8"/><circle cx="44" cy="163" r="1.7"/><circle cx="88" cy="188" r="2"/>
+</g>
+<!-- sound radiating from the palm -->
+<g fill="none" stroke="#3fc9a0" stroke-width="5.5" stroke-linecap="round">
+  <path d="M186 104 A34 34 0 0 1 186 156" opacity=".95"/>
+  <path d="M198 92 A50 50 0 0 1 198 168" opacity=".7"/>
+  <path d="M210 80 A66 66 0 0 1 210 180" opacity=".45"/>
+</g>
+<!-- open palm (ahimsa) -->
+<g fill="#fff" stroke="#33302c" stroke-width="4.6" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M104 86v-24a7.5 7.5 0 0 1 15 0v24"/>
+  <path d="M119 84V54a7.5 7.5 0 0 1 15 0v30"/>
+  <path d="M134 84V58a7.5 7.5 0 0 1 15 0v28"/>
+  <path d="M149 88V68a7.5 7.5 0 0 1 15 0v26"/>
+  <path d="M104 96c-6-10-14-20-20-24a7.5 7.5 0 0 0-10 11c5 6 10 14 12 21"/>
+  <path d="M86 104c0-14 8-22 18-22h60c8 0 12 6 12 14v34c0 24-18 42-42 42s-48-18-48-42z"/>
+</g>
+<!-- wheel of non-violence in the palm -->
+<g stroke="#8b6ff0" stroke-width="4" fill="none" stroke-linecap="round">
+  <circle cx="126" cy="132" r="19" fill="#f1ecff"/>
+  <circle cx="126" cy="132" r="6.2" fill="#8b6ff0" stroke="none"/>
+  <path d="M126 113v8M126 143v8M107 132h8M137 132h8M112.6 118.6l5.7 5.7M133.7 139.7l5.7 5.7M139.4 118.6l-5.7 5.7M118.3 139.7l-5.7 5.7"/>
+</g>
+<!-- leaf sprig -->
+<g transform="translate(24,104)">
+  <path d="M0 46C0 22 14 6 38 2c0 22-14 40-38 44z" fill="#3fc9a0" stroke="#33302c" stroke-width="3.6" stroke-linejoin="round"/>
+  <path d="M4 44C12 32 22 20 34 12" fill="none" stroke="#33302c" stroke-width="2.6" stroke-linecap="round"/>
+</g>
+</svg></div>
+      <div class="body">
+        <span class="lang">ગુજરાતી &middot; Gujarati</span><span class="dur"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2"/></svg> 2:02</span>
+        <h4>શુદ્ધ જૈન આહાર — a spoken explainer</h4>
+        <p>Why ahimsa reaches all the way to the dinner table, what anantkaya means, and how the app&rsquo;s strict-observance setting lets a household calibrate the analysis to its own practice. Narrated in Gujarati.</p>
+        <audio controls preload="none" src="media/audio-jain.m4a">Your browser can&rsquo;t play audio &mdash;
+          <a href="media/audio-jain.m4a">download the recording</a> instead.</audio>
+        <a class="dl" href="media/audio-jain.m4a" download>&darr; Download the recording</a>
+      </div>
+    </div>
   </section>
 
   <section class="page" id="intro-b">
@@ -344,6 +489,53 @@
     but of ongoing, invisible damage. This is precisely the kind of careful, rule-based label reading this
     app was built to perform reliably, every time, so that the person doing the shopping does not have to
     memorize every hidden alias gluten can travel under.</p>
+    <div class="media-card gf">
+      <div class="art"><svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration: a wheat stalk crossed out, its grains lifting away and becoming sound waves">
+<defs>
+  <linearGradient id="gbg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#fff6dd"/><stop offset="55%" stop-color="#fdf0e6"/><stop offset="1" stop-color="#e8f5ff"/>
+  </linearGradient>
+</defs>
+<rect width="320" height="200" fill="url(#gbg)"/>
+<!-- sound radiating right -->
+<g fill="none" stroke="#54b8f0" stroke-width="5.5" stroke-linecap="round">
+  <path d="M196 96 A34 34 0 0 1 196 148" opacity=".95"/>
+  <path d="M208 84 A50 50 0 0 1 208 160" opacity=".7"/>
+  <path d="M220 72 A66 66 0 0 1 220 172" opacity=".45"/>
+</g>
+<!-- grains lifting away and dissolving -->
+<g fill="#ffa447" stroke="#33302c" stroke-width="2.6">
+  <ellipse cx="150" cy="52" rx="7" ry="11" transform="rotate(28 150 52)" opacity=".95"/>
+  <ellipse cx="170" cy="38" rx="5.6" ry="9" transform="rotate(38 170 38)" opacity=".7"/>
+  <ellipse cx="188" cy="30" rx="4.4" ry="7" transform="rotate(48 188 30)" opacity=".45"/>
+</g>
+<!-- wheat stalk -->
+<g fill="none" stroke="#33302c" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M118 178V78"/>
+  <g fill="#ffd93d">
+    <path d="M118 88c0-13 8-22 18-26 3.4 13.6-3 26-18 26z"/>
+    <path d="M118 88c0-13-8-22-18-26-3.4 13.6 3 26 18 26z"/>
+    <path d="M118 118c0-13 8-22 18-26 3.4 13.6-3 26-18 26z"/>
+    <path d="M118 118c0-13-8-22-18-26-3.4 13.6 3 26 18 26z"/>
+    <path d="M118 148c0-13 8-22 18-26 3.4 13.6-3 26-18 26z"/>
+    <path d="M118 148c0-13-8-22-18-26-3.4 13.6 3 26 18 26z"/>
+  </g>
+</g>
+<!-- the "free of" mark -->
+<g fill="none" stroke="#cf4133" stroke-width="7" stroke-linecap="round">
+  <circle cx="118" cy="126" r="52" opacity=".92"/>
+  <path d="M81 89 155 163"/>
+</g>
+</svg></div>
+      <div class="body">
+        <span class="lang">English</span><span class="dur"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.4l3.4 2"/></svg> 1:35</span>
+        <h4>The gluten-free side, explained aloud</h4>
+        <p>Celiac disease, non-celiac gluten sensitivity and wheat allergy are three different things with one shared consequence. This recording walks through the distinctions and the aliases gluten hides behind on a label.</p>
+        <audio controls preload="none" src="media/audio-gluten-free.m4a">Your browser can&rsquo;t play audio &mdash;
+          <a href="media/audio-gluten-free.m4a">download the recording</a> instead.</audio>
+        <a class="dl" href="media/audio-gluten-free.m4a" download>&darr; Download the recording</a>
+      </div>
+    </div>
   </section>
 
   <section class="page" id="intro-c">
@@ -374,6 +566,10 @@
     are the same underlying problem wearing different clothes: too much information, printed too small, to
     reliably parse by hand every single time. If this app makes that problem noticeably smaller for even
     one shopper standing in one aisle, it has done its job.</p>
+    <figure class="slide grape">
+      <img loading="lazy" decoding="async" src="media/slide-07-pipeline.jpg" alt="From shutter button to verdict">
+      <figcaption><b>From shutter button to verdict</b> What actually happens in those few seconds: the photo is read, the text is isolated, an AI model interprets it, and a fixed rule set &mdash; not the model&rsquo;s opinion &mdash; decides the outcome. <span class="src">From the illustrated primer, slide 7.</span></figcaption>
+    </figure>
   </section>
 
   <section class="page" id="intro-d">
@@ -398,6 +594,13 @@
     <p class="lede">With the thinking behind the app out of the way, this chapter is about the app itself:
     what's on screen, how to get set up, and how to run your first scan. It stays deliberately light on
     detail in places — a full breakdown of every result field lives later, in Appendix A.</p>
+    <figure class="infographic">
+      <img loading="lazy" decoding="async" src="media/features-at-a-glance.jpg"
+           alt="Scan Smarter, Eat Safer — the five core ways the app verifies dietary compliance">
+      <figcaption><b>Scan Smarter, Eat Safer</b>The five things the app can do, on one page — live camera scan,
+        gallery import, batch processing, check by name, and the three colour-coded verdicts. Everything below
+        is the long version of this picture.</figcaption>
+    </figure>
 
     <h2><span class="kicker">Using the app · A</span>Getting Started</h2>
     <h3>What's On Screen</h3>
@@ -423,6 +626,10 @@
         <div class="cap">Home screen — the four quick-action buttons and the AI disclaimer below them.</div>
       </div>
     </div>
+    <figure class="slide sky">
+      <img loading="lazy" decoding="async" src="media/slide-04-four-ways.jpg" alt="Four buttons, four situations">
+      <figcaption><b>Four buttons, four situations</b> Which of the four you reach for depends on where you are: in the aisle with the packet in hand, at home with a photo already taken, auditing a whole trolley, or sitting in a restaurant with no label at all. <span class="src">From the illustrated primer, slide 4.</span></figcaption>
+    </figure>
 
     <h3>Before Your First Scan: Adding an API Key</h3>
     <div class="step-row">
@@ -452,6 +659,10 @@
         <div class="cap">Setup screen — choosing a provider, adding an API key, and picking which diets to check.</div>
       </div>
     </div>
+    <figure class="slide lemon">
+      <img loading="lazy" decoding="async" src="media/slide-03-byok-setup.jpg" alt="Bring your own key, in three steps">
+      <figcaption><b>Bring your own key, in three steps</b> The app has no server and no account. Your key lives on your device and talks straight to the provider you picked. <span class="src">From the illustrated primer, slide 3.</span></figcaption>
+    </figure>
   </section>
 
   <section class="page" id="u-b">
@@ -476,6 +687,10 @@
         <div class="shot"><img loading="lazy" decoding="async" src="screenshots/u031.png" alt="Camera screen, take 2"><div class="cap">A second take of the same camera view.</div></div>
       </div>
     </div>
+    <figure class="slide bubble">
+      <img loading="lazy" decoding="async" src="media/slide-05-camera-tips.jpg" alt="Framing the shot, and the barcode you never see">
+      <figcaption><b>Framing the shot, and the barcode you never see</b> Fill the viewfinder with the ingredient panel and pinch to zoom rather than moving closer. While you frame, the app is already scanning for a barcode in the background. <span class="src">From the illustrated primer, slide 5.</span></figcaption>
+    </figure>
 
     <p>You'll land on the <b>Review</b> screen next, showing the photo you just took.</p>
 
@@ -492,6 +707,10 @@
         <div class="shot"><img loading="lazy" decoding="async" src="screenshots/u041.png" alt="Review screen, alternate take"><div class="cap">A second take of the same Review screen.</div></div>
       </div>
     </div>
+    <figure class="slide sky">
+      <img loading="lazy" decoding="async" src="media/slide-06-review-anatomy.jpg" alt="Everything on the Review screen">
+      <figcaption><b>Everything on the Review screen</b> Provider and diet toggles, the captured image and any barcode match, the language the verdict will be written in, and the product name &mdash; all editable before you tap Analyze. <span class="src">From the illustrated primer, slide 6.</span></figcaption>
+    </figure>
 
     <div class="step-row">
       <div class="step-text">
@@ -672,6 +891,10 @@
         <div class="cap">In-app Understanding Results guide, explaining each lettered section.</div>
       </div>
     </div>
+    <figure class="slide grape">
+      <img loading="lazy" decoding="async" src="media/slide-08-result-teardown.jpg" alt="The Result screen, taken apart">
+      <figcaption><b>The Result screen, taken apart</b> The same lettered sections described below, shown against a real result so you can match this page to what is on your screen. <span class="src">From the illustrated primer, slide 8.</span></figcaption>
+    </figure>
 
     <p>Most sections on the Result screen carry a small lettered badge in the app itself, in the corner of
     the section. Where a section has one, it's called out below (<b>A</b>, <b>B</b>, <b>C</b>, and so on)
@@ -691,6 +914,11 @@
     collapsed or expanded independently by tapping the small divider between them. A small "?" button on
     each card opens the in-app guide for that specific diet.</p>
 
+
+    <figure class="slide mint">
+      <img loading="lazy" decoding="async" src="media/slide-09-verdict-matrix.jpg" alt="The verdict legend, and what each one asks of you">
+      <figcaption><b>The verdict legend, and what each one asks of you</b> Green, red and amber each carry a different instruction &mdash; proceed, avoid, or go and verify. Amber is not a failure; it is the app declining to guess. <span class="src">From the illustrated primer, slide 9.</span></figcaption>
+    </figure>
     <p>The full legend — every color and label you might see on a verdict card — is:</p>
     <table class="legend">
       <tr><th>Color</th><th>Label</th><th>Diet</th><th>Meaning</th></tr>
@@ -789,6 +1017,10 @@
         <div class="cap">AI provider list, showing verified connections and the active model.</div>
       </div>
     </div>
+    <figure class="slide lemon">
+      <img loading="lazy" decoding="async" src="media/slide-11-strict-observance.jpg" alt="What the strict-observance toggle actually changes">
+      <figcaption><b>What the strict-observance toggle actually changes</b> Jain practice is not uniform, and the app does not pretend otherwise. Strict mode narrows the target: all dairy, all root vegetables and all fermented items become non-compliant. <span class="src">From the illustrated primer, slide 11.</span></figcaption>
+    </figure>
 
     <div class="step-row">
       <div class="step-text">
@@ -822,6 +1054,10 @@
       <div class="shot"><img loading="lazy" decoding="async" src="screenshots/a050.png" alt="Language chips in Settings"><div class="cap">App language chips in Settings (English, Hindi, Gujarati, Marathi).</div></div>
       <div class="shot"><img loading="lazy" decoding="async" src="screenshots/a051.png" alt="Language chips on Review screen"><div class="cap">Result language chips on the Review screen, for one scan.</div></div>
     </div>
+    <figure class="slide bubble">
+      <img loading="lazy" decoding="async" src="media/slide-12-dual-language.jpg" alt="Two language settings, doing two different jobs">
+      <figcaption><b>Two language settings, doing two different jobs</b> App language changes the interface everywhere, immediately. Result language changes only what the AI writes for the scan you are about to run. <span class="src">From the illustrated primer, slide 12.</span></figcaption>
+    </figure>
     <p>A completed result written entirely in Gujarati, as a real example:</p>
     <div class="media-center">
       <div class="shot wide"><img loading="lazy" decoding="async" src="screenshots/guj-01.png" alt="Result screen in Gujarati"><div class="cap">A completed result written entirely in Gujarati.</div></div>
@@ -916,7 +1152,7 @@
   // Lightbox: click any manual screenshot to zoom, click again to close.
   var lb = document.getElementById('lightbox');
   var lbImg = document.getElementById('lightbox-img');
-  document.querySelectorAll('.shot img, .frame img').forEach(function(img){
+  document.querySelectorAll('.shot img, .frame img, figure.slide img, figure.infographic img').forEach(function(img){
     img.addEventListener('click', function(){
       lbImg.src = img.getAttribute('src');
       lb.classList.add('open');
